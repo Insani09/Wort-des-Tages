@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wort des Tages - Koleksi Kata Unik Bahasa Jerman</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Responsive dengan Hamburger -->
+    <nav>
+        <div class="container">
+            <div class="logo-section">
+                <img src="Deutschsemkanisa logo.jpg" alt="Deutschsemkanisa logo" class="logo-img">
+                <div class="logo-text">
+                    <h2 class="brand-title">Wort des Tages</h2>
+                    <p class="brand-subtitle">Deutschsemkanisa</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Beranda</a>
+                <a href="#about" class="nav-link">Mengapa Harus Kami?</a>
+                <a href="#flashcard-section" class="nav-link">Koleksi Kata</a>
+            </div>
+            <button class="nav-btn" onclick="document.getElementById('flashcard-section').scrollIntoView({behavior: 'smooth'})">Mulai Belajar</button>
+
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" onclick="closeMenu()">Beranda</a>
+            <a href="#about" onclick="closeMenu()">Mengapa Harus Kami?</a>
+            <a href="#flashcard-section" onclick="closeMenu()">Koleksi Kata</a>
+            <button class="nav-btn-mobile" onclick="scrollToFlashcard()">Mulai Belajar</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank" class="social-link"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://github.com" target="_blank" class="social-link"><i class='bx bxl-github'></i></a>
+                    <a href="https://wa.me" target="_blank" class="social-link"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+                <div class="typing-container">
+                    <h1 id="typingText" class="typing-text"></h1>
+                    <span class="cursor"></span>
+                </div>
+                <p class="hero-description">Pelajari kata-kata unik dan menarik dari bahasa Jerman yang akan memperkaya kosa kata Anda. Setiap kata memiliki cerita dan makna yang mendalam dalam budaya Jerman.</p>
+                <button class="hero-btn" onclick="document.getElementById('flashcard-section').scrollIntoView({behavior: 'smooth'})">
+                    Mulai Belajar <i class='bx bxs-chevron-right'></i>
+                </button>
+            </div>
+
+        
+        </div>
+    </section>
+
+    <!-- Tentang Website Section -->
+    <section style="padding: 5rem 2rem; background: white;">
+        <div class="container">
+            <h2 class="section-title">Tentang Website Ini</h2>
+            <div class="underline"></div>
+
+            <div style="max-width: 800px; margin: 3rem auto; background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+                    <strong style="color: #000; font-size: 1.1rem;">Wort des Tages</strong> adalah platform pembelajaran interaktif yang dirancang khusus untuk siswa ekstrakulikuler bahasa Jerman. Website ini menyediakan koleksi kata-kata unik dan menarik dari bahasa Jerman yang jarang diajarkan di sekolah.
+                </p>
+
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #666; margin-bottom: 1.5rem;">
+                    Dengan menggunakan metode <strong style="color: #DD0000;">flashcard interaktif</strong>, kami membantu Anda memahami tidak hanya arti kata, tetapi juga konteks penggunaan dan nuansa budaya di balik setiap kata dalam bahasa Jerman.
+                </p>
+
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #666;">
+                    Tujuan kami adalah membuat pembelajaran bahasa Jerman menjadi lebih menyenangkan, interaktif, dan bermakna. Setiap kata yang kami sajikan dipilih dengan cermat karena keunikan dan pentingnya dalam komunikasi sehari-hari dengan penutur asli bahasa Jerman.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">Mengapa Belajar Kata-Kata Ini?</h2>
+            <div class="underline"></div>
+
+            <div class="about-grid" style="margin-top: 3rem;">
+                <div class="about-card">
+                    <i class='bx bxs-brain'></i>
+                    <h3>Memperkaya Kosa Kata</h3>
+                    <div class="feature-label">Pembelajaran Interaktif</div>
+                    <p>Pelajari kata-kata unik yang jarang diajarkan di sekolah namun sangat berguna dalam percakapan sehari-hari dengan penutur asli Jerman.</p>
+                </div>
+
+                <div class="about-card">
+                    <i class='bx bxs-book'></i>
+                    <h3>Memahami Budaya Jerman</h3>
+                    <div class="feature-label">Perspektif Budaya</div>
+                    <p>Setiap kata mencerminkan nilai dan perspektif unik dari budaya Jerman yang kaya dan mendalam. Pahami cara berpikir masyarakat Jerman melalui bahasa.</p>
+                </div>
+
+                <div class="about-card">
+                    <i class='bx bxs-book-reader'></i>
+                    <h3>Metode Pembelajaran Modern</h3>
+                    <div class="feature-label">Flashcard Interaktif</div>
+                    <p>Gunakan flashcard yang menyenangkan dan interaktif untuk memudahkan pembelajaran dan meningkatkan retensi memori jangka panjang Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flashcard Section -->
+    <section class="flashcard-section" id="flashcard-section">
+        <div class="container">
+            <h2 class="section-title">Koleksi Kata Pilihan</h2>
+            <div class="underline"></div>
+            <p class="section-subtitle">Klik kartu untuk melihat arti dan contoh penggunaan kata-kata menarik dalam bahasa Jerman</p>
+
+            <div class="flashcards-grid">
+                <!-- Card 1: Wanderlust -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-map'></i></div>
+                            <div class="word-title">Wanderlust</div>
+                            <div class="word-type">Substantiv (f)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Keinginan yang kuat untuk bepergian dan menjelajahi dunia
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Seine Wanderlust trieb ihn in ferne Länder."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Fernweh -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-compass'></i></div>
+                            <div class="word-title">Fernweh</div>
+                            <div class="word-type">Substantiv (n)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Kerinduan akan kejauhan; kehausan untuk bepergian jauh
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Sie verspürte ein starkes Fernweh nach dem Süden."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Schadenfreude -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-happy-heart-eyes'></i></div>
+                            <div class="word-title">Schadenfreude</div>
+                            <div class="word-type">Substantiv (f)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Kesenangan yang dirasakan dari kemalangan orang lain
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Mit Schadenfreude beobachtete er seinen Rivale."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Waldeinsamkeit -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-tree'></i></div>
+                            <div class="word-title">Waldeinsamkeit</div>
+                            <div class="word-type">Substantiv (f)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Perasaan menyendiri dan kesepian yang damai di tengah hutan
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Sie suchte Waldeinsamkeit in den dichten Wäldern."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Gemütlichkeit -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-home-smile'></i></div>
+                            <div class="word-title">Gemütlichkeit</div>
+                            <div class="word-type">Substantiv (f)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Suasana nyaman, hangat, dan ramah; kebersamaan yang penuh kehangatan
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Die Gemütlichkeit des Cafés gefällt mir sehr."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Murks -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-confused'></i></div>
+                            <div class="word-title">Murks</div>
+                            <div class="word-type">Substantiv (m)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Pekerjaan buruk, asal-asalan, atau ceroboh
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Das ist ja totaler Murks! Das geht gar nicht."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Geistesblitz -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-star'></i></div>
+                            <div class="word-title">Geistesblitz</div>
+                            <div class="word-type">Substantiv (m)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Kilatan ide; momen tiba-tiba mendapat ide cemerlang
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Ein Geistesblitz half mir, das Problem zu lösen."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: Sehnsucht -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-heart'></i></div>
+                            <div class="word-title">Sehnsucht</div>
+                            <div class="word-type">Substantiv (f)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Kerinduan yang mendalam dan menyakitkan; nostalgia yang kuat
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Eine tiefe Sehnsucht erfüllte sein Herz."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9: Kopfkino -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-film'></i></div>
+                            <div class="word-title">Kopfkino</div>
+                            <div class="word-type">Substantiv (n)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Imajinasi vivid; menonton film dalam kepala Anda
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Das Kopfkino machte die Geschichte noch spannender."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10: Torschlusspanik -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-time'></i></div>
+                            <div class="word-title">Torschlusspanik</div>
+                            <div class="word-type">Substantiv (f)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Kepanikan karena waktu terus berlalu; takut kehabisan kesempatan
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Im Alter wächst die Torschlusspanik bei vielen Menschen."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11: Fernweh -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-happy'></i></div>
+                            <div class="word-title">Kummerspeck</div>
+                            <div class="word-type">Substantiv (m)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Berat badan yang naik karena makan emosional saat sedih
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Nach der Trennung aß sie aus Trauer und bekam Kummerspeck."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12: Fernweh -->
+                <div class="flashcard-container">
+                    <div class="flashcard">
+                        <div class="flashcard-front">
+                            <div class="word-icon"><i class='bx bxs-wine'></i></div>
+                            <div class="word-title">Zeitgeist</div>
+                            <div class="word-type">Substantiv (m)</div>
+                            <div class="card-hint">Klik untuk melihat artinya →</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="word-meaning">
+                                Semangat zaman; karakteristik budaya dan pemikiran suatu era
+                            </div>
+                            <div class="word-example">
+                                <strong>Contoh:</strong> "Die Mode zeigt immer den Zeitgeist einer Epoche."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Comment Section -->
+    <section style="padding: 5rem 2rem; background: #f8f7f4;">
+        <div class="container">
+            <h2 class="section-title">Komentar & Masukan</h2>
+            <div class="underline"></div>
+
+            <div style="max-width: 800px; margin: 3rem auto;">
+                <form id="commentForm" style="background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 3rem;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #000;">Nama Anda</label>
+                        <input type="text" placeholder="Masukkan nama Anda" required style="width: 100%; padding: 0.9rem; border: 1px solid #ddd; border-radius: 0.4rem; font-family: 'Open Sans', sans-serif; font-size: 1rem; transition: border 0.3s ease;" onFocus="this.style.borderColor='#DD0000'" onBlur="this.style.borderColor='#ddd'">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #000;">Email (Opsional)</label>
+                        <input type="email" placeholder="Masukkan email Anda" style="width: 100%; padding: 0.9rem; border: 1px solid #ddd; border-radius: 0.4rem; font-family: 'Open Sans', sans-serif; font-size: 1rem; transition: border 0.3s ease;" onFocus="this.style.borderColor='#DD0000'" onBlur="this.style.borderColor='#ddd'">
+                    </div>
+
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: #000;">Komentar Anda</label>
+                        <textarea placeholder="Bagikan masukan, saran, atau pengalaman Anda dalam belajar..." required style="width: 100%; padding: 0.9rem; border: 1px solid #ddd; border-radius: 0.4rem; font-family: 'Open Sans', sans-serif; font-size: 1rem; min-height: 120px; resize: vertical; transition: border 0.3s ease;" onFocus="this.style.borderColor='#DD0000'" onBlur="this.style.borderColor='#ddd'"></textarea>
+                    </div>
+
+                    <button type="submit" style="width: 100%; background: #DD0000; color: white; padding: 1rem; border: none; border-radius: 0.4rem; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; font-family: 'Open Sans', sans-serif;">
+                        Kirim Komentar
+                    </button>
+                </form>
+
+                <div id="commentsContainer" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <!-- Comments will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Wort des Tages</h3>
+                    <p>Platform pembelajaran interaktif untuk menguasai kata-kata unik bahasa Jerman.</p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com" class="footer-social-link"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://github.com" class="footer-social-link"><i class='bx bxl-github'></i></a>
+                        <a href="https://wa.me" class="footer-social-link"><i class='bx bxl-whatsapp'></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Menu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Mengapa Harus Kami?</a></li>
+                        <li><a href="#flashcard-section">Koleksi Kata</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Kontak</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contact@example.com">Email</a></li>
+                        <li><a href="https://wa.me">WhatsApp</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 <span class="footer-accent">Wort des Tages</span> - Ekskul Bahasa Jerman. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
